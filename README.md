@@ -4,7 +4,8 @@ segun los datos obtenidos de la API  (nombre, precio, color, talla, descripcion,
 3) Se realizo un carusel animado basico con las imagenes obtenidas de la API
 4) Se realizo el diseño responsive
 5) La seleccion de la variante del producto se debe realizar segun los siguintes pasos:
-5.1) Se hace click en la opcion "Inicar Sesion" (parte superior de la pagina)
+
+7.1) Se hace click en la opcion "Inicar Sesion" (parte superior de la pagina)
 
 5.2) Se debe ingresar la direcion de correo y contraseña siguiente (datos de prueba):
 	       Correo electronico: lasb72@hotmail.com
