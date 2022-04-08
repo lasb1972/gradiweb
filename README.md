@@ -17,6 +17,6 @@ segun los datos obtenidos de la API  (nombre, precio, color, talla, descripcion,
 
 5.5)  Se debe indicar la cantidad de unidades que se desea comprar haciendo click en el boton mas(+) o menos(-) en el caso que se desee reducir la cantidad de                 unidades solicitadas. Esta accion ira generando un total de precio a pagar.
 
-5.6)  Por ultimo se debe hacer click en el boton: "Agregar al carrito". Esto abrira un modal donde se mostraran todos los datos de la variante seleccionada. Esta             data viene de la API que acceso desde la aplicacion.
+5.6)  Por ultimo se debe hacer click en el boton: "Agregar al carrito". Esto abrira un modal donde se mostraran los datos de la variante seleccionada . Algunos datos  vienen de la API que acceso desde la aplicacion.
 
 5.7) El usuario podras ver mediante el carrusel las diversas imagenes traidas de la API mediante el boton "Sigiente" y "Anterior".	
