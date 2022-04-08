@@ -1,70 +1,15 @@
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+1) Se solicito la informacion de la API publica con exito
+2) Se realizo la maquetacion de una ficha de producto
+segun los datos obtenidos de la API  (nombre, precio, color, talla, descripcion, galeria de imagenes, variantes del producto)
+3) Se realizo un carusel animado basico con las imagenes obtenidas de la API
+4) Se realizo el diseño responsive
+5) La seleccion de la variante del producto se debe realizar segun los siguintes pasos:
+    5.1) Se hace click en la opcion "Inicar Sesion" (parte superior de la pagina)
+	5.2) Se debe ingresar la direcion de correo y contraseña siguiente (datos de prueba):
+	       Correo electronico: lasb72@hotmail.com
+		   Contraseña: 1
+    5.3)  Al ingresa el usuario y la contraseña incorrectamente el sistema indicara con un mensaje de alerta de usuario no registrado (para el ejecicio estoy simulando           que se ha hecho un llamado a una base de datos que me ha retornado la tabla de usuarios registrados en el sistema)	
+	5.4)    Se muestra la pagina donde el usuario debe seleccionar Color del producto, la talla haciendo click sobre una de las variantes de talla de calzado                       (7,7.5,8,8.5,9,9.5,10,10.5,11,11.5). Una vez hecho click sobre una de las variantes, este valor se reflejara en el recuadro en amarillo al lado del item               talla.
+    5.5)  Sedebe indicar la cantidad de unidades que se desea comprar haciendo click en el boton mas(+) o menos(-) en el caso que se desee reducir la cantidad de                 unidades solicitadas. Esta accion ira generando un total de precio a pagar.
+    5.6)  Por ultimo se debe hacer click en el boton: "Agregar al carrito". Esto abrira un modal donde se mostraran todos los datos de la variante seleccionada. Esta             data viene de la API que acceso desde la aplicacion.
+	5.7) El usuario podras ver mediante el carrusel las diversas imagenes traidas de la API mediante el boton "Sigiente" y "Anterior".	
