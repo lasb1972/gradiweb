@@ -19,4 +19,4 @@ segun los datos obtenidos de la API  (nombre, precio, color, talla, descripcion,
 
 5.6)  Por ultimo se debe hacer click en el boton: "Agregar al carrito". Esto abrira un modal donde se mostraran los datos de la variante seleccionada . Algunos datos  vienen de la API que acceso desde la aplicacion.
 
-5.7) El usuario podras ver mediante el carrusel las diversas imagenes traidas de la API mediante el boton "Sigiente" y "Anterior".	
+5.7) El usuario podras ver mediante el carrusel las diversas imagenes traidas de la API mediante el boton "Siguiente" y "Anterior".	
