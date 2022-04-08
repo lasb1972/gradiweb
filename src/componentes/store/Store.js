@@ -57,13 +57,14 @@ function Store() {
       setCurrentImage(data.media[0].src)
 
       let imagenes =[]
+      let json
 
       data.media.map(item => {
-          let json = {
+          json = {
             "id": item.position,
             "src":item.src
           }
-         imagenes.push(json)
+        return imagenes.push(json)
       })
       
       console.log(JSON.stringify(imagenes)) 
@@ -94,7 +95,7 @@ function Store() {
   
      //RECORRO EL ARREGLO VARIANTS Y COMPARO CON EL 'COLOR' Y LA 'TALLA'
     //SELECCIONADOS POR EL USUARIO PARA OBTENER EL JSON CON LOS DATOS DEL PRODUCTO
-    for (var i = 0; i < variants.length; i++) { 
+    for (i = 0; i < variants.length; i++) { 
         if(colorSeleccionado===variants[i].option1 && talla===variants[i].option2)
         {
      
@@ -180,13 +181,15 @@ const modalHandler = (idimagen) =>{
           <div className='marcoPricipal'>
             <div className='marcoImagen'>
                <div className='marco'>
-                  <div >
+                  <div id="marcoAnterior">
                     <button id="btn-anterior" onClick={carrusel}  >
                       <i id="fa-angle-left" className="fas fa-angle-left" ></i>
                     </button>
                   </div>
+                  <div>
                      <img id="img" src={currentImage} alt=""/>
-                  <div style={{zIndex :'999'}}>
+                  </div>   
+                  <div id="marcoSiguiente" >
                     <button id="btn-siguiente" onClick={carrusel}  >
                       <i id="fa-angle-right" className="fas fa-angle-right"></i>
                     </button>     
