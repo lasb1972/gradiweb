@@ -21,6 +21,9 @@ function Store() {
   const [lisImagen,setListImagen] =useState([])
   const [cont,setCont] = useState(0)
   const [entrar,setEntrar] = useState(false)
+  const [precioFormateado,setPrecioFormateado] = useState('0')
+  const [subTotalCarrito,setSubTotalCarrito] = useState('0')
+  
 
   useEffect(() => {
 
@@ -34,6 +37,9 @@ function Store() {
       setTitulo(data.title) 
       //ACA SETEO EL PRECIO DEL PRODUCTO
       setPrecio(data.price)
+      setPrecioFormateado(new Intl.NumberFormat('de-DE', { style: 'currency', currency: 'USA' }).format(data.price));
+
+
       // ACA SETEO LOS COLORES QUE ME TRAIDO DE LA API. ESTOS SERAN MIS VALORES PARA MIS RADIO-BUTTONS 
       setColores(data.options[0].values) 
       // ACA SETEO LAS DIFERENTES MEDIDAS DE CALZADOS QUE ME TRAIGO DE LA API
@@ -118,13 +124,16 @@ function Store() {
     setValor(valor+1)
     setCounter(counter + 1*precio)
 
+    setSubTotalCarrito(new Intl.NumberFormat('de-DE', { style: 'currency', currency: 'USA' }).format(counter + 1*precio))
+
   }
 
   const decrementar= () =>{
     if (valor>0){
       setValor(valor-1)
       setCounter(counter - 1*precio)
-  
+      setSubTotalCarrito(new Intl.NumberFormat('de-DE', { style: 'currency', currency: 'USA' }).format(counter - 1*precio))
+
     }  
   }
   
@@ -192,7 +201,7 @@ const modalHandler = (idimagen) =>{
             </div>
             <div className='marcoInformacion'>
 			  <div className="titulo">{titulo}</div>   
-                <div className="precio">{precio}</div>
+                <div className="precio">{precioFormateado}</div>
                 <form id="form" name="form"> 
                     <div className="color">
                         <div className="colorBody">
@@ -222,7 +231,7 @@ const modalHandler = (idimagen) =>{
                 </form> 
                     <div className="marcoTallas">
                         <div className="tallas">
-                            <div className="talla">Talla:
+                            <div className="talla"> <label style={{margin:0}}>Talla:</label>
                                 <div className="size" id="size" name="size">
                                   {talla}
                                 </div>
@@ -244,7 +253,7 @@ const modalHandler = (idimagen) =>{
                         <button className="botonDecrementar" type="button" onClick={ decrementar} style={{outline:'none'}}>-</button>
                           <label className="labelContador">{valor}</label>
                         <button className="botonIncrementar" type="button" onClick={incrementar} style={{outline:'none'}}>+</button>
-                        <div className="total" >Total: {counter} </div>
+                        <div className="total" >Total: {subTotalCarrito} </div>
                     <div>
  
     </div>

@@ -36,8 +36,10 @@ const VentanaDeDatos = (props) => {
                     <Label id="labelModal"  for="name">{props.datosProductoSelecionado.name}</Label>
                 </FormGroup>
                 <FormGroup>
-                    <label id="labelModal">Precio del producto:</label>
-                    <Label id="labelModal"  for="precio">{props.datosProductoSelecionado.precio}</Label>
+                    <label id="labelModal">Precio del producto por unidad:</label>
+                    <Label id="labelModal"  for="precio">{
+                    new Intl.NumberFormat('de-DE', { style: 'currency', currency: 'USA' }).format(props.datosProductoSelecionado.precio)                    
+                    }</Label>
                 </FormGroup>
                 <FormGroup>
                     <label id="labelModal">Cantidad de unidades:</label>
@@ -45,7 +47,9 @@ const VentanaDeDatos = (props) => {
                 </FormGroup>
                 <FormGroup>
                     <label id="labelModal">Subtotal del carrito:</label>
-                    <Label id="labelModal"  for="precio">{props.datosProductoSelecionado.subtotal}</Label>
+                    <Label id="labelModal"  for="precio">{
+                    new Intl.NumberFormat('de-DE', { style: 'currency', currency: 'USA' }).format(props.datosProductoSelecionado.subtotal)                            
+                    }</Label>
                 </FormGroup>
             </ModalBody>
             <ModalFooter>

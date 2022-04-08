@@ -1,0 +1,98 @@
+/*Anulamos el scroll que nos sale en la pantalla inicial*/
+
+/*::-webkit-scrollbar {
+  display: none;  
+}*/
+
+/*::-moz-scrollbars-none {
+    overflow:hidden    
+}*/
+body {
+    font-size: 14px;
+  }
+  
+  .cuerpo-form{
+      /*background: pink;*/
+      width: 100% !important; 
+      height: 81vh !important;  /*(100vh - 5.47645125958379vh)=94.52354874041621vh;*/
+      display: flex !important; 
+      justify-content: center !important; /* mi elementos los coloco al final */
+      align-items: center !important; 
+      /*overflow-x: hidden;
+      overflow-y: hidden;*/
+  }
+  
+  .cuerpo-div{
+      background: #bfbfbf;
+      /*padding: 10px !important; */
+      padding-left:15px;
+      padding-right: 15px;
+      padding-top: 30px;
+      padding-bottom: 30px;
+      font-size: 14px;
+    }
+  
+    .cuerpo{
+      width: 21.42em; /*21.42em x 14 = 300px*/
+      height: 26.25px;
+      display: block;
+      font-size: 14px;
+      border-radius: 15px;
+      outline: none ;  /*Quita el borde que aparece alrededor del input al hacer clic dentro de el*/
+      border: 0px; 
+      padding-left: 5px ; 
+      padding-top: 4px;
+      margin-bottom:10px ; 
+      box-sizing: border-box ; 
+      background: white ; 
+      color: black ; 
+      padding-left: 7px !important;
+    }
+  
+    .botonSesion{
+      background-color: rgb(12, 170, 231);
+      color: white;
+      width: 21.42em; /*21.42em x 14 = 300px*/
+      height: 26.25px;
+      font-size: 14px;
+      border-radius: 15px;
+      border: 0px;
+      /*margin-bottom:10px;*/
+      outline: none;
+  
+    }
+  
+    .alerta{
+      background: #bfbfbf; /*rgb(12, 170, 231) !important;*/
+      height: 20px !important;
+      font-size: 14px !important;  /*es igual a 14px*/
+      font-family: 'Josefin Sans'  !important;
+      margin-bottom: 0;
+      color:white;
+      text-align: center;
+      line-height: 1.5;
+      position: absolute;
+      top:0;
+      left: 0;
+      width: 100%;
+    }
+    
+    /*.cuerpoMenuHijo::-webkit-scrollbar{
+      overflow-y:unset;
+      height: 88.3vh;
+    }*/
+  
+  
+    @media screen and (max-width:768px){
+  
+      .botonSesion{
+          font-size: 12px;
+      }
+  
+      .cuerpo{
+          font-size: 12px;
+      }
+        
+    }
+
+  
